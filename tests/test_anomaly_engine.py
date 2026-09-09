@@ -1,10 +1,12 @@
 import importlib.util
 import pathlib
+import sys
 import unittest
 
 MODULE = pathlib.Path(__file__).parents[1] / "src" / "anomaly_engine.py"
 spec = importlib.util.spec_from_file_location("anomaly_engine", MODULE)
 anomaly_engine = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = anomaly_engine
 spec.loader.exec_module(anomaly_engine)
 
 BASELINE={"known_external_destinations":["203.0.113.20"],"communications":{"app->db":{"ports":[5432],"avg_connections":10,"zone_paths":[["app","data"]]}}}
