@@ -1,0 +1,7 @@
+[
+  {"source":"app-01","destination":"db-01","port":5432,"connections":22,"source_zone":"app","destination_zone":"data","destination_type":"internal"},
+  {"source":"app-01","destination":"db-01","port":3389,"connections":2,"source_zone":"app","destination_zone":"data","destination_type":"internal"},
+  {"source":"workstation-07","destination":"db-01","port":5432,"connections":4,"source_zone":"user","destination_zone":"data","destination_type":"internal"},
+  {"source":"app-01","destination":"198.51.100.44","port":443,"connections":5,"source_zone":"app","destination_zone":"internet","destination_type":"external"},
+  {"source":"app-01","destination":"203.0.113.20","port":443,"connections":80,"source_zone":"app","destination_zone":"internet","destination_type":"external"}
+]
