@@ -1,0 +1,8 @@
+{
+  "known_external_destinations": ["203.0.113.20"],
+  "communications": {
+    "app-01->db-01": {"ports":[5432],"avg_connections":20,"zone_paths":[["app","data"]]},
+    "admin-01->app-01": {"ports":[22],"avg_connections":5,"zone_paths":[["management","app"]]},
+    "app-01->203.0.113.20": {"ports":[443],"avg_connections":15,"zone_paths":[["app","internet"]]}
+  }
+}
